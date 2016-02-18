@@ -6,5 +6,6 @@
 * Another service running on the back end fetches the requests from the queue and starts processing the requests(this uses phantomjs to take snapshots)
 * After processing the request has been processed the result of the request is cached and served to the client
 * This can have multiple main processes which fork children to get the requests processed quickly
+
 #### Architecture Diagram
 ![Alt Text](/images/Instance Pool.png)
