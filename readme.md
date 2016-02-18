@@ -11,3 +11,4 @@
 ![Alt Text](/images/Instance Pool.png)
 
 #### Dependancies
+* You need to have RabbitMQ server setup on localhost
