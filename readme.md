@@ -1,4 +1,5 @@
 ### Instance Pool Manager
+![Alt Text](https://travis-ci.org/akashvbabu/InstancePoolManager.svg?branch=master)
 
 #### What is instance pool manager?
 * This service collects requests from the user(any kind of request, right now it takes requests to take snapshots of webpages)
