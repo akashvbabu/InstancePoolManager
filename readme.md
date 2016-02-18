@@ -9,3 +9,5 @@
 
 #### Architecture Diagram
 ![Alt Text](/images/Instance Pool.png)
+
+#### Dependancies
