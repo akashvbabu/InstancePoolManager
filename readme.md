@@ -9,7 +9,7 @@
 * This can have multiple main processes which fork children to get the requests processed quickly
 
 #### Architecture Diagram
-![Alt Text](./images/instancepoolimage.png)
+![Alt Text](./images/InstancePool2.png)
 
 #### Dependencies
 
