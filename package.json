@@ -29,6 +29,7 @@
     "flux": "^2.1.1",
     "hapi-react-views": "^5.0.2",
     "inert": "^3.2.0",
+    "ioredis": "^1.15.1",
     "object-assign": "^4.0.1",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",

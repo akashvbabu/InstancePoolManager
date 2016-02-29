@@ -6,7 +6,10 @@ var url = system.args[1];
 page.open(url, function() {
   //wait for 3 seconds for the page to load completely
   setTimeout(function(){
-    page.render('sample.png'); //use the render method to store in png format in the same folder as the phantom script
+    var output = page.renderBase64();//use the render method to store in png format in the same folder as the phantom script
+    //take only text
+    // var textOutput = page.plainText;
+    system.stdout.write(output);
     phantom.exit(); //exit after taking snapshot
   },3000);
 });

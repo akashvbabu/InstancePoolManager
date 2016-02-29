@@ -2,6 +2,8 @@
 var amqp = require('amqplib/callback_api'); //rabbitmq node client
 var spawn = require('child_process').spawn; //to spawn a child process
 var phantomjs = require('phantomjs'); //phantomjs library
+var Redis = require('ioredis');
+var redis = new Redis();
 
 //connect to rabbit node on the localhost
 amqp.connect('amqp://localhost', function(err, conn) {
@@ -16,9 +18,10 @@ amqp.connect('amqp://localhost', function(err, conn) {
       console.log(" [x] Received %s", msg.content.toString());
       if(msg1.url){
         var phantomProcess = spawn(phantomjs.path,['./takeSnapshot.js',msg1.url]); //take snapshot
-
+        var outputString = "";
         phantomProcess.stdout.on('data', (data) =>{
-          //aggregate data here 
+          //aggregate data here
+          outputString += data;
           console.log('stdout:'+data);
         });
 
@@ -30,6 +33,8 @@ amqp.connect('amqp://localhost', function(err, conn) {
           console.log('exited with code:'+code);
           //store the data in some intermediate data structure
           //send ack to msg after the phantom process exits
+          redis.set(msg1.url,outputString);
+          outputString = '';
           ch.ack(msg);
         });
       }

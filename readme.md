@@ -9,7 +9,16 @@
 * This can have multiple main processes which fork children to get the requests processed quickly
 
 #### Architecture Diagram
-![Alt Text](/images/Instance Pool.png)
+![Alt Text](./images/instancepoolimage.png)
 
-#### Dependancies
-* You need to have RabbitMQ server setup on localhost
+#### Dependencies
+
+##### RabbitMQ Server
+* Instructions to setup and run RabbitMQ can be found at https://www.rabbitmq.com/download.html
+
+##### Redis Server
+* Instructions to setup and run Redis can be found at http://redis.io/download
+
+#### Running Instructions 
+* ...To be completed
+
